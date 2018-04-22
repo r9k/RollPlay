@@ -3,3 +3,4 @@
 /obj
 RollPlay.njsproj
 public/books/books.orcbrew
+package-lock.json
