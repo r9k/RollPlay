@@ -58,9 +58,9 @@ let server: http.Server = app.listen(app.get("port"), function ():void {
     // console.info("Express server listening on port " + server.address().port);
 });
 
-let io: any = ioModule(server);
+let io: ioModule.Server = ioModule(server);
 
-io.on("connection", function (socket: any):void {
+io.on("connection", function (socket: ioModule.Socket):void {
     socket.on("chat message", function (msg: any):void {
         io.emit("chat message", msg);
     });
